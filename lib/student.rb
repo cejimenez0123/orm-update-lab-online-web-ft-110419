@@ -50,7 +50,7 @@ class Student
     grade = x[2]
     student = Student.new(id,name,grade)
   end
-  def self.find_by_name
+  def self.find_by_name(name)
     sql = <<-SQL 
       SELECT * FROM students WHERE name = ? LIMIT 1
       SQL
