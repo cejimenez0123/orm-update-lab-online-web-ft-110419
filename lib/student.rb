@@ -45,7 +45,6 @@ class Student
     student.save
   end
   def self.new_from_db(x)
-    binding.pry
     self.id = x[0]
     self.name = x[1]
     self.grade = x[2]
