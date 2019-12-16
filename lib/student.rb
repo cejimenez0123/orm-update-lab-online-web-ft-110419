@@ -50,4 +50,9 @@ class Student
     grade = x[2]
     student = Student.new(id,name,grade)
   end
+  def self.find_by_name(x)
+    sql = <<-SQL 
+      SELECT * FROM students WHERE name = ?
+      SQL
+      binding.pry
 end
