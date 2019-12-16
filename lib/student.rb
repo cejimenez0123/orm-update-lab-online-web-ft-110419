@@ -55,4 +55,5 @@ class Student
       SELECT * FROM students WHERE name = ?
       SQL
       binding.pry
+  end
 end
