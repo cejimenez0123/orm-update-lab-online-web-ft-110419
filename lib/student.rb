@@ -14,6 +14,6 @@ class Student
     sql = <<-SQL 
      CREATE TABLE IF NOT EXISTS students (name,grade)
     SQL
-    DB
+    DB[:conn].execute(sql)
   end
 end
