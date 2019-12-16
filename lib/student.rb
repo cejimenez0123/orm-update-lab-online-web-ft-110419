@@ -14,7 +14,7 @@ class Student
     sql = <<-SQL 
      CREATE TABLE IF NOT EXISTS students (
      id INT PRIMARY KEY,
-     name TEXT,grade INT)
+     name TEXT,grade TEXT)
     SQL
     DB[:conn].execute(sql)
   end
