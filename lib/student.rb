@@ -14,7 +14,7 @@ class Student
     sql = <<-SQL 
      CREATE TABLE IF NOT EXISTS students (
      id INT PRIMARY KEY,
-     name TEXT,grade TEXT)
+     name TEXT,grade INT)
     SQL
     DB[:conn].execute(sql)
   end
@@ -46,5 +46,8 @@ class Student
   end
   def self.new_from_db(x)
     binding.pry
+    self.id = x[0]
+    self.name = x[1]
+    self.grade = x[2]
   end
 end
